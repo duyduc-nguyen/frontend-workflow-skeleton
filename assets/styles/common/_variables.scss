@@ -1,0 +1,42 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #27ae60;
+
+$small: 480px;
+$medium: 768px;
+$large: 769px;
+$exlarge: 1220px;
+
+
+/*============================================================================
+	Dependency-free breakpoint mixin
+		- Based on http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/
+		- Usage docs: http://shopify.github.io/Timber/#sass-mixins
+==============================================================================*/
+$min: min-width;
+$max: max-width;
+@mixin at-query ($constraint_, $viewport1_, $viewport2_:null) {
+	$constraint: $constraint_; $viewport1: $viewport1_; $viewport2: $viewport2_;
+		@if type-of($constraint_) == number {
+			$viewport1 : $constraint_; $viewport2 : $viewport1_; $constraint : null;
+		}
+		@if $constraint == $min {
+			@media only screen and ($min: $viewport1) {
+					@content;
+			}
+		} @else if $constraint == $max {
+			@media only screen and ($max: $viewport1) {
+				@content;
+			}
+		} @else {
+			@media only screen and ($min: $viewport1) and ($max: $viewport2) {
+					@content;
+			}
+		}
+}
