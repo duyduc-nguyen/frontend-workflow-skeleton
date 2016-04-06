@@ -1,16 +1,8 @@
 {
-  "name": "sage",
-  "version": "8.4.2",
-  "author": "Ben Word <ben@benword.com>",
-  "homepage": "https://roots.io/sage/",
+  "name": "frontend_automate_skeleton",
+  "author": "Duy Duc <duyduc.uit@gmail.com>",
+  "version": "1.0.0",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/roots/sage.git"
-  },
-  "bugs": {
-    "url": "https://github.com/roots/sage/issues"
-  },
   "licenses": [
     {
       "type": "MIT",
