@@ -212,6 +212,11 @@ gulp.task('fonts', function() {
 // Send image to dist folder
 gulp.task('images', function() {
 	return gulp.src(globs.images)
+		.pipe(imagemin({
+	      	progressive: true,
+	      	interlaced: true,
+	      	svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
+	    }))
 		.pipe(gulp.dest(path.dist + 'images'))
 		.pipe(browserSync.stream());
 });
@@ -253,11 +258,7 @@ gulp.task('watch', function() {
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
-	runSequence('styles',
-							'scripts',
-							['fonts', 'images'],
-							// ['fonts'],
-							callback);
+	runSequence('styles', 'scripts', ['fonts', 'images'], callback);
 });
 
 // ### Wiredep
