@@ -21,6 +21,10 @@
       "bower": ["jquery"]
     }
   },
+  "paths": {
+    "source": "assets/",
+    "dist": "public/dist/"
+  },
   "config": {
     "devUrl": "127.0.0.1"
   }
