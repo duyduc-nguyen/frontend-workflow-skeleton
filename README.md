@@ -89,9 +89,9 @@ If your local development URL looks like `http://localhost:8888/project-name/` y
 | Name            | Type         | Description
 | --------------- | ------------ | ------------- |
 | $constraint     | `String`     | Options: **min-width**, **max-width**, or **null** |
-| $viewport1      | `String`     | If **$constraint** is set to **max-width**:
-* **$viewport1** will be your media query's **max-width**
-								   If **$constraint** is set to **min-width** or **null**:
+| $viewport1      | `String`     | If **$constraint** is set to **max-width**:<br>
+									* **$viewport1** will be your media query's **max-width**<br>
+								   If **$constraint** is set to **min-width** or **null**:<br>
 									* **$viewport1** will be your media query's **min-width** |
 | $viewport2      | `String`     | If set, this becomes the media query's max-width
 								  Default: **null** |
@@ -108,7 +108,7 @@ Example:
 
 Output:
 
-```SCSS
+```CSS
 	@media screen and (max-width: 480px) {
 	  .foo { font-size: 0.8em; }
 	}
