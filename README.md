@@ -90,7 +90,7 @@ If your local development URL looks like `http://localhost:8888/project-name/` y
 | --------------- | ------------ | ------------- |
 | $constraint     | `String`     | Options: **min-width**, **max-width**, or **null** |
 | $viewport1      | `String`     | If **$constraint** is set to **max-width**:
-									* **$viewport1** will be your media query's **max-width**
+* **$viewport1** will be your media query's **max-width**
 								   If **$constraint** is set to **min-width** or **null**:
 									* **$viewport1** will be your media query's **min-width** |
 | $viewport2      | `String`     | If set, this becomes the media query's max-width
@@ -98,7 +98,6 @@ If your local development URL looks like `http://localhost:8888/project-name/` y
 
 Example:
 
-```
 ```SCSS
 	@include at-query($max, $small) {
 	  .foo {
@@ -113,5 +112,4 @@ Output:
 	@media screen and (max-width: 480px) {
 	  .foo { font-size: 0.8em; }
 	}
-```
 ```
