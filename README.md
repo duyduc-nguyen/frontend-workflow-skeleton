@@ -17,7 +17,7 @@ Modified by DuyDuc-Nguyen
 * [Bower](http://bower.io/) for front-end package management
 * [asset-builder](https://github.com/austinpray/asset-builder) for the JSON file based asset pipeline
 * [Bootstrap](http://getbootstrap.com/)
-* [Sass Mixins Helpers](#sass-mixins) to create media queries.
+* [Sass Mixins Helpers](#sass-mixins-helpers) to create media queries.
 
 ## Install
 
@@ -90,8 +90,7 @@ If your local development URL looks like `http://localhost:8888/project-name/` y
 | --------------- | ------------ | ------------- |
 | $constraint     | `String`     | Options: **min-width**, **max-width**, or **null** |
 | $viewport1      | `String`     | If **$constraint** is set to **max-width**:<br>* **$viewport1** will be your media query's **max-width**<br>If **$constraint** is set to **min-width** or **null**:<br>* **$viewport1** will be your media query's **min-width** |
-| $viewport2      | `String`     | If set, this becomes the media query's max-width
-								  Default: **null** |
+| $viewport2      | `String`     | If set, this becomes the media query's max-width<br>Default: **null** |
 
 Example:
 
@@ -110,3 +109,14 @@ Output:
 	  .foo { font-size: 0.8em; }
 	}
 ```
+###Helper class
+|                     | **Small devices<br><480px** | **Medium devices only<br>>481px & <768px** | **Medium and small devices<br>≤768px** | **Large devices<br>≥769px** |
+| ---------------     |:---------------------------:|:------------------------------------------:|:--------------------------------------:|:---------------------------:|
+| .small--show        |`Visible`                    |                                            |                                        |                             |
+| .medium--show       |                             |`Visible`                                   |                                        |                             |
+| .medium-down--show  |`Visible`                    |`Visible`                                   |`Visible`                               |                             |
+| .large--show        |                             |                                            |                                        |`Visible`                    |
+| .small--hide        |`Hidden`                     |                                            |                                        |                             |
+| .medium--hide       |                             |`Hidden`                                    |                                        |                             |
+| .medium-down--hide  |`Hidden`                     |`Hidden`                                    |`Hidden`                                |                             |
+| .large--hide        |                             |                                            |                                        |`Hidden`                     |
