@@ -1,5 +1,6 @@
 # Frontend Automate Skeleton
 Extract from [Sage](https://travis-ci.org/roots/sage)
+
 Modified by DuyDuc-Nguyen
 
 ## Requirements
@@ -25,7 +26,7 @@ From the command line, you'll want to do this inside the folder where you want y
 
 `git clone https://github.com/duyduc-nguyen/frontend-workflow-skeleton.git my-project` 
 
-Building the theme requires [node.js](http://nodejs.org/download/). We recommend you update to the latest version of npm: `npm install -g npm@latest`.
+Building the assets requires [node.js](http://nodejs.org/download/). Please update to the latest version of npm: `npm install -g npm@latest`.
 
 From the command line:
 
